@@ -13,7 +13,6 @@ describe 'iframes' do
                 produto = find('.menu-item-info-box', text: 'REFRIGERANTE')
                 produto.find('a').click
                 expect(find('#cart')).to have_content 'R$ 4,50'
-                sleep 3
             end
         end
     end
@@ -31,7 +30,6 @@ describe 'iframes' do
 
             within_frame('tempId') do
                 expect(find('#cart')).to have_content 'Seu carrinho está vazio!'
-                sleep 3
             end
 
         end

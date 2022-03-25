@@ -7,18 +7,13 @@ describe 'Select2', :select2 do
 
         it 'seleciona ator por nome' do
             find('.select2-selection--single').click #o capybara consegue pegar alguns elementos em angular
-            sleep 1
             find('.select2-results__option', text: 'Adam Sandler').click
-            sleep 5
         end
 
         it 'selecionando por busca' do
             find('.select2-selection--single').click
-            sleep 1
             find('.select2-search__field').set 'Chris Rock'
-            sleep 1
             find('.select2-results__option').click
-            sleep 2
         end
     end
 

@@ -8,8 +8,4 @@ describe 'Botoes de Radio', :radio do
     it 'selecao por ID' do
         choose('cap')
     end
-
-    after(:each) do
-        sleep 3
-    end
 end

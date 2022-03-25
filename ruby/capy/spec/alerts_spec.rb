@@ -33,7 +33,6 @@ describe 'alerta de js', :alerts do
 
         accept_prompt(with: 'Renan') do
             click_button 'Prompt'
-            sleep 2
         end
 
         expect(page).to have_content 'Olá, Renan'
@@ -45,7 +44,6 @@ describe 'alerta de js', :alerts do
         # Quando eu não aceito esse prompt, então a mensagem deve ser "Olá, null"
         dismiss_prompt do
             click_button 'Prompt'
-            sleep 2
         end
 
         expect(page).to have_content 'Olá, null'

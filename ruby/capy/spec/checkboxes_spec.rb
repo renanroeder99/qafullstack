@@ -21,8 +21,4 @@ describe 'Caixas de seleção', :checkbox do
         find('input[value=guardians]').set(false)
     end
 
-    after(:each) do
-        sleep 3
-    end
-
 end

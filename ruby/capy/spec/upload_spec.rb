@@ -24,8 +24,4 @@ describe 'Upload', :upload do
         expect(img[:src]).to include '/uploads/ballet.png'
     end
 
-    after(:each) do
-        sleep 3
-    end
-
 end

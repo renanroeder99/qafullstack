@@ -21,7 +21,6 @@ describe 'teclado', :key do
         letras.each do |l|
             find('#campo-id').send_keys l
             expect(page).to have_content 'You entered: ' + l.to_s.upcase
-            sleep 1
         end
     end
 end
