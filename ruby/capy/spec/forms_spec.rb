@@ -1,6 +1,6 @@
 describe 'Forms', :forms do
     it 'login com sucesso' do
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
         
         fill_in 'userId', with: 'stark'
         fill_in 'password', with: 'jarvis!'
@@ -16,7 +16,7 @@ describe 'Forms', :forms do
     end
 
     it 'senha incorreta', :incorreta do
-       visit 'https://training-wheels-protocol.herokuapp.com/login' 
+       visit '/login' 
        fill_in 'userId', with: 'stark'
        fill_in 'password', with: 'toca Raul!'
 
@@ -26,7 +26,7 @@ describe 'Forms', :forms do
     end
 
     it 'usuario nao cadastrado' do
-       visit 'https://training-wheels-protocol.herokuapp.com/login'
+       visit '/login'
        fill_in 'userId', with: 'miranha'
        fill_in 'password', with: 'toca Raul!'
 
@@ -34,4 +34,5 @@ describe 'Forms', :forms do
 
        expect(find('#flash')).to have_content 'O usuário informado não está cadastrado!'
     end
+
 end

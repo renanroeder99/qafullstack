@@ -3,7 +3,7 @@ describe 'Upload', :upload do
 
 
     before(:each) do
-        visit 'https://training-wheels-protocol.herokuapp.com/upload'
+        visit '/upload'
         @arquivo = Dir.pwd + '/spec/fixture/arquivo.txt'
         @imagem = Dir.pwd + '/spec/fixture/ballet.png'
     end
@@ -19,7 +19,7 @@ describe 'Upload', :upload do
     it 'upload de imagem', :upload_imagem do
         attach_file('file-upload', @imagem)
         click_button 'Upload'
-
+        sleep 5
         img = find('#new-image')
         expect(img[:src]).to include '/uploads/ballet.png'
     end
